@@ -23,17 +23,17 @@ run_prepare = function() {
   # Streamline VIMC impact estimates for quick loading
   prepare_vimc_estimates()
   
+  # Prepare country income status classification over time
+  prepare_income_status()
+  
+  # Prepare demography-related estimates from WPP
+  prepare_demography()
+  
   # Prepare all covariates for regression modelling
   prepare_covariates()  # See covariates.R
   
   # Prepare historical vaccine coverage
   prepare_coverage()  # See coverage.R
-  
-  # Prepare demography-related estimates from WPP
-  prepare_demography()
-  
-  # Prepare country income status classification over time
-  prepare_income_status()
 }
 
 # ---------------------------------------------------------
@@ -140,6 +140,56 @@ prepare_vimc_estimates = function() {
 }
 
 # ---------------------------------------------------------
+# Prepare country income status classification over time
+# ---------------------------------------------------------
+prepare_income_status = function() {
+  
+  message(" > Income status")
+  
+  # Path to data file
+  #
+  # SOURCE: https://datacatalogfiles.worldbank.org/ddh-published/0037712/
+  #         DR0090755/CLASS.xlsx?versionId=2023-11-16T18:35:30.5758473Z
+  #
+  # Alternatively, download 'Historical classification by income' Excel file from: 
+  # datacatalog.worldbank.org/search/dataset/0037712/World-Development-Indicators
+  file = paste0(o$pth$input, "worldbank_income_status.csv")
+  
+  # Full country-year combination
+  full_dt = expand_grid(
+    country = all_countries(), 
+    year    = o$years) %>%
+    as.data.table()
+  
+  # Load and format country income status over time
+  income_dt = fread(file, header = TRUE) %>%
+    # Countries of interest...
+    filter(country %in% all_countries()) %>%
+    select(-country_name) %>%
+    # Convert to tidy format...
+    pivot_longer(cols = -country, 
+                 names_to  = "year", 
+                 values_to = "income") %>%
+    # Country with all full country-year combo...
+    mutate(year = as.integer(year)) %>%
+    full_join(y  = full_dt, 
+              by = c("country", "year")) %>%
+    arrange(country, year) %>%
+    # Fill missing data with pro/preceding value...
+    mutate(income = ifelse(income == "", NA, income)) %>%
+    group_by(country) %>%
+    fill(income, .direction = "downup") %>%
+    ungroup() %>%
+    # Niue and Cook Islands missing, both are HIC...
+    replace_na(list(income = "H")) %>%
+    mutate(income = paste0(tolower(income), "ic")) %>%
+    as.data.table()
+  
+  # Save in tables cache
+  save_table(income_dt, "income_status")
+}
+
+# ---------------------------------------------------------
 # Prepare demography-related estimates from WPP
 # ---------------------------------------------------------
 prepare_demography = function() {
@@ -225,56 +275,6 @@ prepare_demography = function() {
     # Save in tables cache
     save_table(data_dt, paste1("wpp", metric))
   }
-}
-
-# ---------------------------------------------------------
-# Prepare country income status classification over time
-# ---------------------------------------------------------
-prepare_income_status = function() {
-  
-  message(" > Income status")
-  
-  # Path to data file
-  #
-  # SOURCE: https://datacatalogfiles.worldbank.org/ddh-published/0037712/
-  #         DR0090755/CLASS.xlsx?versionId=2023-11-16T18:35:30.5758473Z
-  #
-  # Alternatively, download 'Historical classification by income' Excel file from: 
-  # datacatalog.worldbank.org/search/dataset/0037712/World-Development-Indicators
-  file = paste0(o$pth$input, "worldbank_income_status.csv")
-  
-  # Full country-year combination
-  full_dt = expand_grid(
-    country = all_countries(), 
-    year    = o$years) %>%
-    as.data.table()
-  
-  # Load and format country income status over time
-  income_dt = fread(file, header = TRUE) %>%
-    # Countries of interest...
-    filter(country %in% all_countries()) %>%
-    select(-country_name) %>%
-    # Convert to tidy format...
-    pivot_longer(cols = -country, 
-                 names_to  = "year", 
-                 values_to = "income") %>%
-    # Country with all full country-year combo...
-    mutate(year = as.integer(year)) %>%
-    full_join(y  = full_dt, 
-              by = c("country", "year")) %>%
-    arrange(country, year) %>%
-    # Fill missing data with pro/preceding value...
-    mutate(income = ifelse(income == "", NA, income)) %>%
-    group_by(country) %>%
-    fill(income, .direction = "downup") %>%
-    ungroup() %>%
-    # Niue and Cook Islands missing, both are HIC...
-    replace_na(list(income = "H")) %>%
-    mutate(income = paste0(tolower(income), "ic")) %>%
-    as.data.table()
-  
-  # Save in tables cache
-  save_table(income_dt, "income_status")
 }
 
 # ---------------------------------------------------------
