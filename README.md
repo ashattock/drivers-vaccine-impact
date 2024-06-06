@@ -1,16 +1,8 @@
-# EPI50 analysis
+# Drivers of vaccine impact
 
-[![DOI](https://zenodo.org/badge/707482422.svg)](https://zenodo.org/doi/10.5281/zenodo.10974443)
+Statistical assessment of factors driving historical, national-level vaccine impact. Follow up to Shattock et al EPI50 paper.
 
-An analytical framework to estimate the global public health impact of 50 years of the Expanded Programme on Immunization (EPI). This framework estimates deaths averted, years of live saved, and years of full health gained for 14 pathogens within the EPI portfolio. Exclusions include SARS-CoV-2/COVID-19 and HPV. The analysis is performed at country level for 194 UN member states for the timeframe mid-1974 to mid-2024, with results summarised at the global and WHO-region level. This analysis builds upon infectious disease modelling estimates produced by the Vaccine Impact Modelling Consortium (VIMC) and the Global Burden of Disease study (GBD).
-
-## The manuscript 
-
-The code in this repository fully reproduces all analyses and results presented in the peer-reviewed manuscript:
-
-Shattock et al. [Contribution of vaccination to improved survival and health: modelling 50 years of the Expanded Programme on Immunization](https://authors.elsevier.com/sd/article/S0140-6736(24)00850-X). _The Lancet_. 2024.
-
-See our [frequently asked questions](https://github.com/WorldHealthOrganization/epi50-vaccine-impact/tree/master/Frequently%20Asked%20Questions.pdf) guide to help aid interpretation of this study and its findings.
+[Contribution of vaccination to improved survival and health: modelling 50 years of the Expanded Programme on Immunization](https://authors.elsevier.com/sd/article/S0140-6736(24)00850-X)
 
 ## The repository
 
@@ -109,9 +101,10 @@ Solution: Consider one of these two possible solutions. One, reconfigure your ma
 ## Authors
 
 #### Development and maintenance:
-* Andrew J. Shattock (shattocka@who.int, andrewjames.shattock@unibas.ch)
+* Andrew J. Shattock (andrewjames.shattock@unibas.ch)
+* Helen C. Johnson
 
 #### Contributors:
-* Helen C. Johnson
-* Austin Carter
-* So Yoon Sim
+
+* Melissa A. Penny
+* Epke A. Le Rutte
