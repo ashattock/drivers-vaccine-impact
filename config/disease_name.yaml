@@ -27,18 +27,6 @@ table:
 - disease: yf
   disease_name: "Yellow fever"
   
-- disease: dip
-  disease_name: "Diphtheria"
-  
-- disease: tet
-  disease_name: "Tetanus"
-  
-- disease: per
-  disease_name: "Pertussis"
-  
-- disease: tb
-  disease_name: "Tuberculosis"
-  
 - disease: measles
   disease_name: "Measles"
   

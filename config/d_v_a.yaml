@@ -87,78 +87,15 @@ table:
   activity: campaign
   source: vimc
   
-- d_v_a_name: "Diphtheria"
-  d_v_a_id: 13
-  disease: dip
-  vaccine: dip
-  activity: all
-  source: static
-  
-- d_v_a_name: "Diphtheria (booster)"
-  d_v_a_id: 14
-  disease: dip
-  vaccine: dip_bx
-  activity: all
-  source: static
-  
-- d_v_a_name: "Tetanus"
-  d_v_a_id: 15
-  disease: tet
-  vaccine: tet
-  activity: all
-  source: static
-  
-- d_v_a_name: "Tetanus (booster)"
-  d_v_a_id: 16
-  disease: tet
-  vaccine: tet_bx
-  activity: all
-  source: static
-
-- d_v_a_name: "Tetanus (pregnancy)"
-  d_v_a_id: 17
-  disease: tet
-  vaccine: tet_px
-  activity: all
-  source: static
-  
-- d_v_a_name: "Pertussis whole-cell"
-  d_v_a_id: 18
-  disease: per
-  vaccine: wper
-  activity: all 
-  source: static
-  
-- d_v_a_name: "Pertussis acellular"
-  d_v_a_id: 19
-  disease: per
-  vaccine: aper
-  activity: all
-  source: static
-  
-- d_v_a_name: "Pertussis (booster)"
-  d_v_a_id: 20
-  disease: per
-  vaccine: aper_bx
-  activity: all
-  source: static
-  
-- d_v_a_name: "Tuberculosis (BCG)"
-  d_v_a_id: 21
-  disease: tb
-  vaccine: bcg
-  activity: all
-  source: static
-  
 - d_v_a_name: "Measles"
-  d_v_a_id: 22
+  d_v_a_id: 13
   disease: measles
   vaccine: measles
   activity: all
   source: extern
   
 - d_v_a_name: "Poliomyelitis"
-  d_v_a_id: 23
+  d_v_a_id: 14
   disease: polio
   vaccine: polio
   activity: all

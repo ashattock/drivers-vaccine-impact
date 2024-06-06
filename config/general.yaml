@@ -45,11 +45,6 @@ gbd_extrap: "constant"  # OPTIONS: "trend" or "constant"
   
 # GitHub repo for simulating DynaMICE model for EPI50 analysis
 github_dynamice: "ashattock/dynamice"
-
-# ---- Global Burden of Disease ----
-  
-# Use GBD estimates starting from a given year
-gbd_estimate_years: "1980 : 2022"
   
 # ---- Regression settings ----
   

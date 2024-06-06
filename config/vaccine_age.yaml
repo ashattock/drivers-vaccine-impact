@@ -30,33 +30,6 @@ table:
 - vaccine: yf
   age: 0
   
-- vaccine: dip
-  age: 0
-  
-- vaccine: dip_bx
-  age: 7
-  
-- vaccine: tet
-  age: 0
-  
-- vaccine: tet_bx
-  age: 7
-
-- vaccine: tet_px
-  age: NA  # Average age of child birth - extracted from data
-  
-- vaccine: wper
-  age: 0
-  
-- vaccine: aper
-  age: 0
-  
-- vaccine: aper_bx
-  age: 7
-  
-- vaccine: bcg
-  age: 0
-  
 - vaccine: mcv1
   age: 0
   

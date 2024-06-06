@@ -17,7 +17,7 @@ source("dependencies.R")
 message("Running EPI50 pipeline")
 
 # Define modules to be run
-run_modules = 1 : 8
+run_modules = 1
 
 # Set global options (see options.R)
 o = set_options(run_module = run_modules)
@@ -28,8 +28,7 @@ run_prepare()  # See prepare.R
 # Module 2) Interface with external polio and measles models
 run_external()  # See external.R
 
-# Module 3) Estimate impact for static models using GBD
-run_static()  # See static.R
+# Module 3) Now redundant
 
 # Module 4) Impute missing countries for VIMC-modelled pathogens
 run_regression("impute", "deaths")  # See regression.R

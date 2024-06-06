@@ -3,9 +3,9 @@
 # Creates datatable: vaccine_dict_table
 table:
 
-- intervention: bcg
-  vaccine: 
-  - bcg
+# - intervention: bcg
+#   vaccine: 
+#   - bcg
   
 - intervention: bopv
   vaccine: 
@@ -21,99 +21,99 @@ table:
   - opv
   - ipv
   
-- intervention: diphcv4
-  vaccine: 
-  - dip_bx
+# - intervention: diphcv4
+#   vaccine: 
+#   - dip_bx
   
-- intervention: diphteria
-  vaccine: 
-  - dip
+# - intervention: diphteria
+#   vaccine: 
+#   - dip
   
-- intervention: dt
-  vaccine:
-  - dip
-  - tet
+# - intervention: dt
+#   vaccine:
+#   - dip
+#   - tet
   
-- intervention: dt_tdt
-  vaccine:
-  - dip
-  - tet
+# - intervention: dt_tdt
+#   vaccine:
+#   - dip
+#   - tet
   
-- intervention: dtap
-  vaccine:
-  - dip
-  - tet
-  - aper
+# - intervention: dtap
+#   vaccine:
+#   - dip
+#   - tet
+#   - aper
   
 - intervention: dtaphibhepbipv
   vaccine:
-  - dip
-  - tet
-  - aper
+  # - dip
+  # - tet
+  # - aper
   - hib
   - hepb
   
-- intervention: dtp
-  vaccine:
-  - dip
-  - tet
-  - aper
+# - intervention: dtp
+#   vaccine:
+#   - dip
+#   - tet
+#   - aper
   
-- intervention: dtpcv3
-  vaccine:
-  - dip
-  - tet
-  - aper
+# - intervention: dtpcv3
+#   vaccine:
+#   - dip
+#   - tet
+#   - aper
   
-- intervention: dtpcv4
-  vaccine:
-  - dip_bx
-  - tet_bx
-  - aper_bx
+# - intervention: dtpcv4
+#   vaccine:
+#   - dip_bx
+#   - tet_bx
+#   - aper_bx
   
 - intervention: dtphepb
   vaccine:
-  - dip
-  - tet
-  - aper
+  # - dip
+  # - tet
+  # - aper
   - hepb
   
 - intervention: dtphib
   vaccine:
-  - dip
-  - tet
-  - aper
+  # - dip
+  # - tet
+  # - aper
   - hib
   
 - intervention: dtphibhepb
   vaccine:
-  - dip
-  - tet
-  - aper
+  # - dip
+  # - tet
+  # - aper
   - hib
   - hepb
   
 - intervention: dtphibhepb3
   vaccine:
-  - dip
-  - tet
-  - aper
+  # - dip
+  # - tet
+  # - aper
   - hib
   - hepb
   
 - intervention: dtphibhepbipv
   vaccine:
-  - dip
-  - tet
-  - aper
+  # - dip
+  # - tet
+  # - aper
   - hib
   - hepb
   
-- intervention: dtwp
-  vaccine:
-  - dip
-  - tet
-  - wper
+# - intervention: dtwp
+#   vaccine:
+#   - dip
+#   - tet
+#   - wper
   
 - intervention: hepb
   vaccine: 
@@ -239,9 +239,9 @@ table:
   vaccine: 
   - opv
   
-- intervention: pab  # Protection at birth against neonatal tetanus 
-  vaccine: 
-  - tet_px
+# - intervention: pab  # Protection at birth against neonatal tetanus
+#   vaccine:
+#   - tet_px
   
 - intervention: pcv3
   vaccine: 
@@ -261,15 +261,15 @@ table:
   
 - intervention: penta_td
   vaccine:
-  - dip
-  - tet
-  - aper
+  # - dip
+  # - tet
+  # - aper
   - hib
   - hepb
   
-- intervention: percv4
-  vaccine: 
-  - aper_bx
+# - intervention: percv4
+#   vaccine: 
+#   - aper_bx
   
 - intervention: pneumo_conj
   vaccine: 
@@ -296,41 +296,41 @@ table:
   vaccine: 
   - rota
   
-- intervention: td_s
-  vaccine:
-  - dip
-  - tet
+# - intervention: td_s
+#   vaccine:
+#   - dip
+#   - tet
   
-- intervention: tdap_s
-  vaccine:
-  - dip
-  - tet
-  - aper
+# - intervention: tdap_s
+#   vaccine:
+#   - dip
+#   - tet
+#   - aper
   
 - intervention: tdipv_s
   vaccine:
-  - dip
-  - tet
+  # - dip
+  # - tet
   - ipv
   
 - intervention: tdpipv
   vaccine:
-  - dip
-  - tet
-  - aper
+  # - dip
+  # - tet
+  # - aper
   - ipv
   
-- intervention: t
-  vaccine: 
-  - tet
+# - intervention: t
+#   vaccine: 
+#   - tet
   
-- intervention: tt2plus
-  vaccine: 
-  - tet
+# - intervention: tt2plus
+#   vaccine: 
+#   - tet
   
-- intervention: ttcv4
-  vaccine: 
-  - tet_bx
+# - intervention: ttcv4
+#   vaccine: 
+#   - tet_bx
   
 - intervention: yf
   vaccine: 

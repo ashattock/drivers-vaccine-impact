@@ -30,33 +30,6 @@ table:
 - vaccine: yf
   vaccine_name: "Yellow fever"
   
-- vaccine: dip
-  vaccine_name: "Diphtheria primary"
-  
-- vaccine: dip_bx
-  vaccine_name: "Diphtheria booster"
-  
-- vaccine: tet
-  vaccine_name: "Tetanus primary"
-  
-- vaccine: tet_bx
-  vaccine_name: "Tetanus booster"
-  
-- vaccine: tet_px
-  vaccine_name: "Tetanus pregnancy"
-  
-- vaccine: wper
-  vaccine_name: "Whole-cell pertussis"
-  
-- vaccine: aper
-  vaccine_name: "Acellular pertussis primary"
-  
-- vaccine: aper_bx
-  vaccine_name: "Acellular pertussis booster"
-  
-- vaccine: bcg
-  vaccine_name: "Bacille Calmette-Guerin"
-  
 - vaccine: mcv1
   vaccine_name: "Measles first dose"
   
